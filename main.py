@@ -40,7 +40,7 @@ while True:
     boxes_ids=tracker.update(list)
     for box_id in boxes_ids:
         x,y,w,h,id=box_id
-        cv2.rectangle(frame,(x,y),(w,h),(255,0,255),2)
+        cv2.rectangle(frame,(x,y),(w,h),(400,0,400),2)
         cv2.putText(frame,str(id),(x,y),cv2.FONT_HERSHEY_PLAIN,3,(255,0,0),2)
         result=cv2.pointPolygonTest(np.array(area_1,np.int32),(int(w),int(h)),False)
         if result>0:
